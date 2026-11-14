@@ -7,6 +7,11 @@ data/*
 *.xlsm
 # Uncomment only for files that are synthetic and labeled as such:
 # !data/synthetic/**/*.xlsx
+# SQLite database files and their journals: they hold department data
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
 
 # --- Secrets ---
 .env
