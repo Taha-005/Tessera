@@ -16,7 +16,7 @@ humans approve every constraint, relaxation and publication. The LLM never place
 
 | Path | Contents |
 |---|---|
-| `backend/` | Python package: API, agent, solver, validator, data layer, observability (TODO: TESS-12) |
+| `backend/` | Python package `tessera`: `api`, `agent`, `solver`, `validator`, `data`, `observability`; settings in `tessera/config.py` |
 | `frontend/` | React + TypeScript interface (TODO: TESS-14) |
 | `eval/` | Evaluation harness and runners (TODO: plan task T-110, not yet in Jira) |
 | `spikes/` | Time-boxed technical experiments (SPIKE-1 to SPIKE-4) and their results |
@@ -26,7 +26,31 @@ humans approve every constraint, relaxation and publication. The LLM never place
 
 ## Setup
 
-TODO: TESS-12 (backend), TESS-13 (database), TESS-14 (frontend); full setup and reproduction guide: plan task T-137, not yet in Jira.
+TODO: TESS-13 (database), TESS-14 (frontend); full setup and reproduction guide: plan task T-137, not yet in Jira.
+
+### Backend
+
+You need [uv](https://docs.astral.sh/uv/). It installs Python 3.12 for you.
+
+| Step | Windows (PowerShell) | macOS / Linux |
+|---|---|---|
+| Install uv (once) | `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 \| iex"` | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
+| Go to the backend | `cd backend` | `cd backend` |
+| Install the locked dependencies | `uv sync` | `uv sync` |
+| Create your settings file | `Copy-Item .env.example .env` | `cp .env.example .env` |
+
+Then edit `backend/.env`: set `DATA_DIR`, `DATABASE_URL` (any placeholder works until TESS-13) and `JWT_SECRET_KEY`.
+Generate the key with `uv run python -c "import secrets; print(secrets.token_urlsafe(32))"`.
+The app refuses to start if a required setting is missing or empty, and the error names the setting.
+
+The commands below are the same on every system, run from `backend/`:
+
+| Task | Command |
+|---|---|
+| Run the API (reloads on save) | `uv run uvicorn tessera.main:create_app --factory --reload` |
+| Check it is up | open <http://127.0.0.1:8000/health>, which returns `{"status":"ok"}` |
+| Run the tests | `uv run pytest` |
+| Lint and format check | `uv run ruff check` and `uv run ruff format --check` |
 
 ## Data policy
 
