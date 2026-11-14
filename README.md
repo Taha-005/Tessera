@@ -17,7 +17,7 @@ humans approve every constraint, relaxation and publication. The LLM never place
 | Path | Contents |
 |---|---|
 | `backend/` | Python package `tessera`: `api`, `agent`, `solver`, `validator`, `data`, `observability`; settings in `tessera/config.py` |
-| `frontend/` | React + TypeScript interface (TODO: TESS-14) |
+| `frontend/` | React + TypeScript interface (Vite, Tailwind, TanStack Query); typed API client in `src/api/` |
 | `eval/` | Evaluation harness and runners (TODO: plan task T-110, not yet in Jira) |
 | `spikes/` | Time-boxed technical experiments (SPIKE-1 to SPIKE-4) and their results |
 | `data/` | Synthetic data only. Raw department data is never committed (see `data/README.md`) |
@@ -26,7 +26,7 @@ humans approve every constraint, relaxation and publication. The LLM never place
 
 ## Setup
 
-TODO: TESS-14 (frontend); full setup and reproduction guide: plan task T-137, not yet in Jira.
+TODO: full setup and reproduction guide: plan task T-137, not yet in Jira.
 
 ### Backend
 
@@ -63,6 +63,32 @@ and there is no server to install. Why SQLite: [`docs/decisions/2026-11-14-datab
   Review the new file in `migrations/versions/`, then run `uv run alembic upgrade head`.
 - **Real department data:** point `DATABASE_URL` at a file outside the repository, e.g. `sqlite:///C:/tessera-data/tessera.db`
   (Windows) or `sqlite:////home/you/tessera-data/tessera.db` (macOS / Linux, four slashes for an absolute path).
+
+### Frontend
+
+You need [Node.js](https://nodejs.org/) 22.12 or newer (it includes npm). The commands are the same on every system, run from `frontend/`:
+
+| Task | Command |
+|---|---|
+| Install the locked dependencies | `npm ci` |
+| Run the app (reloads on save) | `npm run dev`, then open <http://localhost:5173> |
+| Lint | `npm run lint` |
+| Typecheck | `npm run typecheck` |
+| Production build | `npm run build` |
+| Regenerate the typed API client | `npm run generate:api` (the backend must be running) |
+
+The page calls the backend's `/health` and shows the result. For that to work:
+
+- the backend must be running on <http://127.0.0.1:8000>. Use another address by setting `VITE_API_BASE_URL` in `frontend/.env.local`;
+- the backend must allow the frontend's origin: `CORS_ALLOWED_ORIGINS=["http://localhost:5173"]` in `backend/.env`, as in `.env.example`.
+
+**Typed API client.** `src/api/schema.d.ts` is generated from the backend's OpenAPI schema with
+[openapi-typescript](https://openapi-ts.dev/), and `src/api/client.ts` calls the API through
+[openapi-fetch](https://openapi-ts.dev/openapi-fetch/). A wrong path, parameter or response field is then a compile error.
+Run `npm run generate:api` after every backend API change, and commit the regenerated file.
+The generator runs through `npx` with its own TypeScript 5.9, because it needs TypeScript's older JavaScript API, which TypeScript 7 no longer has. The app itself uses TypeScript 7.
+
+**Linter.** The frontend uses oxlint, not ESLint. Why: [`docs/decisions/2026-11-14-frontend-linter-oxlint.md`](docs/decisions/2026-11-14-frontend-linter-oxlint.md).
 
 ## Data policy
 
