@@ -22,7 +22,8 @@ humans approve every constraint, relaxation and publication. The LLM never place
 | `spikes/` | Time-boxed technical experiments (SPIKE-1 to SPIKE-4) and their results |
 | `data/` | Synthetic data only. Raw department data is never committed (see `data/README.md`) |
 | `reports/` | Committed evaluation and metrics reports, each with its method and versions |
-| `docs/` | Architecture, API, decisions (`docs/decisions/`) and workflow evidence (`docs/evidence/`) |
+| `docs/` | Architecture, API, decisions (`docs/decisions/`) and workflow evidence (`docs/evidence/`); data provenance in `docs/provenance.md` |
+| `tools/` | One-off data tools run outside the app, e.g. `tools/aub_extraction/` (public AUB schedule extraction; outputs go to the team drive, never here) |
 
 ## Setup
 
