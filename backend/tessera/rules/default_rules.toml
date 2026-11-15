@@ -1,0 +1,118 @@
+# Rule configuration: defaults (T-025). Committed to the repo.
+#
+# Lists every hard rule (H1-H11, project doc Section 7.3) and soft objective (S1-S5, Section 7.4)
+# with hard/soft, weight and parameters. Every rule and parameter value has a source and a status.
+# All values are PROPOSED until the department confirms rule hardness (O-14).
+#
+# Department-derived values (from the interview or meetings) do NOT go here. They go in the
+# overrides file DATA_DIR/rule_overrides.toml in the data location (team drive), never committed (D-13).
+
+schema_version = "1.0"
+
+[rules.H1]
+name = "No overlaps within any no-clash group, except approved clash exceptions"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+params.definition = { value = "pairwise", source = "D-06 (cohort blocks: O-09)", status = "DECIDED" }
+
+[rules.H2]
+name = "Coupling: lab and recitation meetings do not overlap the course's lectures"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+params.exempt_components = { value = ["in_lecture_lab"], source = "project doc v1 7.3 (in-lecture lab is the defined exception)", status = "PROPOSED" }
+
+[rules.H3]
+name = "No instructor double-booked"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+
+[rules.H4]
+name = "Instructor hard availability respected"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+
+[rules.H5]
+name = "No room double-booked, or no room-type pool over capacity"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+params.room_model = { value = "named_rooms", source = "decision 2026-11-14 Option A; room inventory O-07 open", status = "PROPOSED" }
+
+[rules.H6]
+name = "Room type matches the component; capacity >= section size + slack"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+params.default_slack = { value = 0, source = "placeholder until O-14", status = "PROPOSED" }
+
+[rules.H7]
+name = "Parallel rooms held at the same time"
+hard = true
+source = "project doc v1 7.3 (pattern O-03)"
+status = "PROPOSED"
+
+[rules.H8]
+name = "Cohort required meetings do not overlap the cohort's external fixed meetings"
+hard = true
+source = "project doc v1 7.3, 7.5"
+status = "PROPOSED"
+
+[rules.H9]
+name = "Time windows confirmed as hard"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+
+[rules.H10]
+name = "Major restrictions"
+hard = true
+source = "project doc v1 7.3"
+status = "PROPOSED"
+
+[rules.H11]
+name = "Completeness: every section has its required meetings in valid grid slots"
+hard = true
+source = "project doc v1 7.3"
+status = "DECIDED"
+
+[rules.S1]
+name = "Instructor preferences"
+hard = false
+weight = 1
+source = "project doc v1 7.4; weight placeholder"
+status = "PROPOSED"
+
+[rules.S2]
+name = "Room slack where the department wants it"
+hard = false
+weight = 1
+source = "project doc v1 7.4; weight placeholder"
+status = "PROPOSED"
+params.target_slack = { value = 0, source = "placeholder until O-14", status = "PROPOSED" }
+
+[rules.S3]
+name = "Learned cross-concentration co-enrollment pairs"
+hard = false
+weight = 1
+source = "project doc v1 7.4, 13.5; weight placeholder"
+status = "PROPOSED"
+params.min_co_enrollment_share = { value = 0.2, source = "placeholder until O-11 data", status = "PROPOSED" }
+
+[rules.S4]
+name = "Stability in repair mode"
+hard = false
+weight = 1
+source = "project doc v1 7.4; weight placeholder"
+status = "PROPOSED"
+params.moved_meeting_penalty = { value = 1, source = "placeholder", status = "PROPOSED" }
+
+[rules.S5]
+name = "Conventions (if the department marks them soft)"
+hard = false
+weight = 1
+source = "project doc v1 7.4; weight placeholder"
+status = "PROPOSED"
