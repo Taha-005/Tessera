@@ -66,6 +66,12 @@ graph TD;
 - **Cost of LangGraph:** about twice the loop code, 33 extra packages (including `langchain-core`), 4x slower import, more stack frames to read when something fails, and one more library the whole team must learn before the demo. Speed per request does not matter (the LLM and the solver take seconds).
 - **What LangGraph would add that we don't use:** pausing mid-run and resuming from a saved checkpoint (`interrupt`), parallel branches and multi-agent graphs. Our design has one agent with a bounded loop (Section 13.2); "ask the user" ends the request and the answer comes back as a new request with the session's working memory; the approval gate lives in the app (proposals in the database, T-064), not inside the loop.
 
+## Limits of this spike
+
+- **Scripted model, not a real LLM.** On purpose: both versions send the model the same history, so the model's answers do not depend on the framework. A fixed script removes randomness and cost, so measured differences come from the loop alone. Which model is good at tool calling and extraction is SPIKE-2's question (T-029, T-030), not this one.
+- **One tool call per model turn.** Real models can request several tools in one turn (parallel tool calls). Neither version here handles that; the real loop (T-068) must, and should be tested on recorded real responses that include multi-tool turns.
+- **Speed.** Real requests are dominated by LLM calls (seconds each) and the solver, so the loop's overhead (milliseconds) is not a deciding factor.
+
 ## Proposal for O-13
 
 **Plain Python loop**, built as in `plain_loop.py`: model call, tool call with Pydantic-validated arguments, errors returned to the model as data, a hard step limit, an explicit trace. Revisit if the design gains parallel branches, more than one agent, or a need to pause a run and resume it later.
