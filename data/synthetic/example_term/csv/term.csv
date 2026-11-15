@@ -1,0 +1,2 @@
+id,name,season,academic_year,schema_version,synthetic,source,retrieved_on,generator,seed,notes
+syn-2026-fall,Synthetic Fall 2026,fall,2026-27,1.0,true,hand-written example for T-015,,backend/scripts/make_example_term.py,0,"SYNTHETIC. Invented courses, instructors and rooms. Not AUB data."

@@ -1,0 +1,6 @@
+id,days,start,end,kind
+MWF-0800,MWF,08:00,08:50,lecture
+MWF-0900,MWF,09:00,09:50,lecture
+TR-0800,TR,08:00,09:15,lecture
+M-1400-LAB,M,14:00,16:45,lab
+W-1700-REC,W,17:00,18:45,recitation

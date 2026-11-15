@@ -1,0 +1,4 @@
+id,building,name,room_type,capacity
+R-A101,Synthetic Hall,101,classroom,40
+R-LAB1,Synthetic Hall,Lab 1,lab,20
+R-LAB2,Synthetic Hall,Lab 2,lab,20
