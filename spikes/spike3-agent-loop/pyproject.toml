@@ -1,0 +1,20 @@
+[project]
+name = "spike3-agent-loop"
+version = "0.1.0"
+description = "SPIKE-3 (T-031): the same small agent as a plain loop and with LangGraph."
+requires-python = "==3.12.*"
+dependencies = [
+    "langgraph>=0.6",
+    "pydantic>=2.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.2.0", "ruff>=0.17.5"]
+
+[tool.pytest.ini_options]
+# The tools reuse the backend's term schema and stand-in H1 check; the spike is never imported by the app.
+pythonpath = [".", "../../backend"]
+testpaths = ["."]
+
+[tool.uv]
+package = false
