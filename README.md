@@ -90,6 +90,15 @@ The generator runs through `npx` with its own TypeScript 5.9, because it needs T
 
 **Linter.** The frontend uses oxlint, not ESLint. Why: [`docs/decisions/2026-11-14-frontend-linter-oxlint.md`](docs/decisions/2026-11-14-frontend-linter-oxlint.md).
 
+### Continuous integration
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every pull request to `main` and every push to `main`. It needs no secrets and has two jobs:
+
+- **`backend`:** Ruff check and format check, pytest, `alembic upgrade head` on a fresh SQLite database, and a check that files under `data/raw/` stay git-ignored.
+- **`frontend`:** oxlint, typecheck and build.
+
+To reproduce a failure locally, run the same commands from the Backend and Frontend tables above.
+
 ## Data policy
 
 - Raw department files live only in the team's shared drive. They are never committed, because git history is permanent.
