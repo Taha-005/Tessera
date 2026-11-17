@@ -1,0 +1,10 @@
+# EXAMPLE overrides file (SYNTHETIC values), committed to show the format.
+# The real file is DATA_DIR/rule_overrides.toml (team drive) and is never committed (D-13).
+
+[rules.H6]
+source = "synthetic example"
+params.default_slack = { value = 5, source = "synthetic example", status = "PROPOSED" }
+
+[rules.S1]
+weight = 3
+source = "synthetic example"
