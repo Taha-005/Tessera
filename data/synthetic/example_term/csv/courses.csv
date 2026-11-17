@@ -1,0 +1,5 @@
+id,title,credits,coupled_courses[]
+SYN 101,Synthetic Circuits,3.0,
+SYN 102,Synthetic Programming,3.0,
+SYN 201,Synthetic Signals,3.0,SYN 201L
+SYN 201L,Synthetic Signals Lab,1.0,SYN 201

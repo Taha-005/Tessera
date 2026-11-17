@@ -1,0 +1,8 @@
+id,section_id,component,duration_min,allowed_day_patterns[],room_type,rooms_needed,placed_days,placed_start,placed_end,placed_room_ids[]
+90001-L,90001,lecture,50,MWF,classroom,1,,,,
+90001-IL,90001,in_lecture_lab,50,,lab,2,,,,
+90001-R,90001,recitation,105,,classroom,1,,,,
+90002-L,90002,lecture,50,MWF;TR,classroom,1,MWF,09:00,09:50,R-A101
+90002-B,90002,lab,105,,lab,1,M,14:00,15:45,R-LAB1
+90003-L,90003,lecture,75,TR,classroom,1,,,,
+90004-B,90004,lab,165,,lab,1,,,,

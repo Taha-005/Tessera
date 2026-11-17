@@ -1,0 +1,5 @@
+id,course_id,number,capacity,instructor_ids[]
+90001,SYN 101,1,36,I-01
+90002,SYN 102,1,18,I-02
+90003,SYN 201,1,,
+90004,SYN 201L,1,16,I-03
