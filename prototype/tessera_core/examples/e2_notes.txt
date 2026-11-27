@@ -1,0 +1,9 @@
+drs  x,y,z teaches eece 310 and i need 6 sections
+dr a,b,c,d teach eece 320 and i need 10 sections
+dr  e ,f,g,h teache eece 330 and i need 10 sections of lectures each 40 students and i nee 20 sections of labs from 2 to 4.45
+dr i and j teach eece 380 and i need 3 sections
+dt k and l teache eece 310l and i need 10 sections labs atart at 11 and labs start at 2 and both are 2 hr 45 min long
+dr x and y,a,b,c,g,h,i, l,come mwf
+dr. z,d,e,f,j,k, come tr
+no lectures after 4
+there should be an option for stidents to take all these courses together, at least 1 seciton works with every schedule

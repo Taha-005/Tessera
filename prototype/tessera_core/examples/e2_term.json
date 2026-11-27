@@ -1,0 +1,379 @@
+{
+ "term": "Fall, 2nd-year slice (Mohamad's test constraints)",
+ "slot_kinds": {
+  "lecture_MWF": {
+   "day_patterns": [
+    "MWF"
+   ],
+   "minutes": 50,
+   "starts": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00"
+   ]
+  },
+  "lecture_TR": {
+   "day_patterns": [
+    "TR"
+   ],
+   "minutes": 75,
+   "starts": [
+    "08:00",
+    "09:30",
+    "11:00",
+    "12:30",
+    "14:00",
+    "15:30",
+    "17:00"
+   ]
+  },
+  "lab_310L": {
+   "day_patterns": [
+    "M",
+    "T",
+    "W",
+    "R",
+    "F"
+   ],
+   "minutes": 165,
+   "starts": [
+    "11:00",
+    "14:00"
+   ]
+  },
+  "lab_330": {
+   "day_patterns": [
+    "M",
+    "T",
+    "W",
+    "R",
+    "F"
+   ],
+   "minutes": 165,
+   "starts": [
+    "14:00"
+   ]
+  }
+ },
+ "instructors": [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "x",
+  "y",
+  "z"
+ ],
+ "courses": [
+  {
+   "id": "EECE 310",
+   "component": "lecture",
+   "slot_kinds": [
+    "lecture_MWF",
+    "lecture_TR"
+   ],
+   "sections": [
+    {
+     "id": "EECE 310-1",
+     "instructor": "x"
+    },
+    {
+     "id": "EECE 310-2",
+     "instructor": "x"
+    },
+    {
+     "id": "EECE 310-3",
+     "instructor": "y"
+    },
+    {
+     "id": "EECE 310-4",
+     "instructor": "y"
+    },
+    {
+     "id": "EECE 310-5",
+     "instructor": "z"
+    },
+    {
+     "id": "EECE 310-6",
+     "instructor": "z"
+    }
+   ]
+  },
+  {
+   "id": "EECE 320",
+   "component": "lecture",
+   "slot_kinds": [
+    "lecture_MWF",
+    "lecture_TR"
+   ],
+   "sections": [
+    {
+     "id": "EECE 320-1",
+     "instructor": "a"
+    },
+    {
+     "id": "EECE 320-2",
+     "instructor": "a"
+    },
+    {
+     "id": "EECE 320-3",
+     "instructor": "a"
+    },
+    {
+     "id": "EECE 320-4",
+     "instructor": "b"
+    },
+    {
+     "id": "EECE 320-5",
+     "instructor": "b"
+    },
+    {
+     "id": "EECE 320-6",
+     "instructor": "b"
+    },
+    {
+     "id": "EECE 320-7",
+     "instructor": "c"
+    },
+    {
+     "id": "EECE 320-8",
+     "instructor": "c"
+    },
+    {
+     "id": "EECE 320-9",
+     "instructor": "d"
+    },
+    {
+     "id": "EECE 320-10",
+     "instructor": "d"
+    }
+   ]
+  },
+  {
+   "id": "EECE 330",
+   "component": "lecture",
+   "slot_kinds": [
+    "lecture_MWF",
+    "lecture_TR"
+   ],
+   "size": 40,
+   "sections": [
+    {
+     "id": "EECE 330-1",
+     "instructor": "e"
+    },
+    {
+     "id": "EECE 330-2",
+     "instructor": "e"
+    },
+    {
+     "id": "EECE 330-3",
+     "instructor": "e"
+    },
+    {
+     "id": "EECE 330-4",
+     "instructor": "f"
+    },
+    {
+     "id": "EECE 330-5",
+     "instructor": "f"
+    },
+    {
+     "id": "EECE 330-6",
+     "instructor": "f"
+    },
+    {
+     "id": "EECE 330-7",
+     "instructor": "g"
+    },
+    {
+     "id": "EECE 330-8",
+     "instructor": "g"
+    },
+    {
+     "id": "EECE 330-9",
+     "instructor": "h"
+    },
+    {
+     "id": "EECE 330-10",
+     "instructor": "h"
+    }
+   ]
+  },
+  {
+   "id": "EECE 330 lab",
+   "component": "lab",
+   "slot_kinds": [
+    "lab_330"
+   ],
+   "sections": [
+    {
+     "id": "EECE 330 lab-1",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-2",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-3",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-4",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-5",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-6",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-7",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-8",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-9",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-10",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-11",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-12",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-13",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-14",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-15",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-16",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-17",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-18",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-19",
+     "instructor": null
+    },
+    {
+     "id": "EECE 330 lab-20",
+     "instructor": null
+    }
+   ]
+  },
+  {
+   "id": "EECE 380",
+   "component": "lecture",
+   "slot_kinds": [
+    "lecture_MWF",
+    "lecture_TR"
+   ],
+   "sections": [
+    {
+     "id": "EECE 380-1",
+     "instructor": "i"
+    },
+    {
+     "id": "EECE 380-2",
+     "instructor": "i"
+    },
+    {
+     "id": "EECE 380-3",
+     "instructor": "j"
+    }
+   ]
+  },
+  {
+   "id": "EECE 310L",
+   "component": "lab",
+   "slot_kinds": [
+    "lab_310L"
+   ],
+   "sections": [
+    {
+     "id": "EECE 310L-1",
+     "instructor": "k"
+    },
+    {
+     "id": "EECE 310L-2",
+     "instructor": "k"
+    },
+    {
+     "id": "EECE 310L-3",
+     "instructor": "k"
+    },
+    {
+     "id": "EECE 310L-4",
+     "instructor": "k"
+    },
+    {
+     "id": "EECE 310L-5",
+     "instructor": "k"
+    },
+    {
+     "id": "EECE 310L-6",
+     "instructor": "l"
+    },
+    {
+     "id": "EECE 310L-7",
+     "instructor": "l"
+    },
+    {
+     "id": "EECE 310L-8",
+     "instructor": "l"
+    },
+    {
+     "id": "EECE 310L-9",
+     "instructor": "l"
+    },
+    {
+     "id": "EECE 310L-10",
+     "instructor": "l"
+    }
+   ]
+  }
+ ]
+}

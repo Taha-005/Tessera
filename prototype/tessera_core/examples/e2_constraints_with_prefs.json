@@ -1,0 +1,254 @@
+[
+ {
+  "id": "C1-x",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "x",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-y",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "y",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-a",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "a",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-b",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "b",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-c",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "c",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-g",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "g",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-h",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "h",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-i",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "i",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C1-l",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "l",
+   "allowed_patterns": [
+    "MWF"
+   ]
+  },
+  "source": "dr x, y, a, b, c, g, h, i, l come MWF"
+ },
+ {
+  "id": "C2-z",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "z",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C2-d",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "d",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C2-e",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "e",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C2-f",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "f",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C2-j",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "j",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C2-k",
+  "type": "instructor_days",
+  "hard": true,
+  "params": {
+   "instructor_id": "k",
+   "allowed_patterns": [
+    "TR"
+   ]
+  },
+  "source": "dr z, d, e, f, j, k come TR"
+ },
+ {
+  "id": "C3",
+  "type": "component_time_window",
+  "hard": true,
+  "params": {
+   "component": "lecture",
+   "latest": "16:00"
+  },
+  "source": "no lectures after 4"
+ },
+ {
+  "id": "C4",
+  "type": "no_clash_group",
+  "hard": true,
+  "params": {
+   "cohort_id": "E2",
+   "mode": "every_section",
+   "course_ids": [
+    "EECE 310",
+    "EECE 310L",
+    "EECE 320",
+    "EECE 330",
+    "EECE 330 lab",
+    "EECE 380"
+   ]
+  },
+  "source": "students can take all these together; at least 1 section works with every schedule"
+ },
+ {
+  "id": "P1",
+  "type": "instructor_time_window",
+  "hard": false,
+  "weight": 3,
+  "params": {
+   "instructor_id": "k",
+   "earliest": "14:00"
+  },
+  "source": "dr k prefers afternoons"
+ },
+ {
+  "id": "P2",
+  "type": "instructor_time_window",
+  "hard": false,
+  "weight": 2,
+  "params": {
+   "instructor_id": "l",
+   "latest": "13:45"
+  },
+  "source": "dr l prefers mornings"
+ },
+ {
+  "id": "P3",
+  "type": "instructor_time_window",
+  "hard": false,
+  "weight": 2,
+  "params": {
+   "instructor_id": "e",
+   "latest": "12:15"
+  },
+  "source": "dr e prefers mornings"
+ },
+ {
+  "id": "P4",
+  "type": "instructor_time_window",
+  "hard": false,
+  "weight": 1,
+  "params": {
+   "instructor_id": "a",
+   "earliest": "12:00"
+  },
+  "source": "dr a prefers to start after 12"
+ }
+]
